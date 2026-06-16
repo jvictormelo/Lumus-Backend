@@ -1,0 +1,37 @@
+{
+  "name": "lumus-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvictormelo/Lumus-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvictormelo/Lumus-Backend/issues"
+  },
+  "homepage": "https://github.com/jvictormelo/Lumus-Backend#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "i18next": "^26.3.1",
+    "i18next-fs-backend": "^2.6.6",
+    "i18next-http-middleware": "^3.9.7",
+    "mysql2": "^3.22.5",
+    "pdfkit": "^0.19.1",
+    "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.5",
+    "nodemon": "^3.1.14"
+  }
+}
