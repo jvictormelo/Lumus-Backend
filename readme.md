@@ -1,4 +1,4 @@
-# Lumus 📚
+# Lumus 
 
 Sistema web de gestão de leitura pessoal. Acompanhe seus livros, registre seu progresso e avalie suas leituras.
 
@@ -25,7 +25,5 @@ npm run dev
 
 ## ToDo
 
-- Busca de livros via API externa (Google Books)
 - Metas anuais de leitura
 - Estatísticas por gênero com gráficos
-- Compartilhar avaliações com outros usuários
