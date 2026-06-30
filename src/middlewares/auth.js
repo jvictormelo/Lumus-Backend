@@ -5,7 +5,7 @@
  */
 const requireAuth = (req, res, next) => {
   if (!req.session.userId) {
-    return res.status(401).json({ error: 'Não autenticado' });
+    return res.status(401).json({ error: req.t('errors.not_authenticated') });
   }
   next();
 };

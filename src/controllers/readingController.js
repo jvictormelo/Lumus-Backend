@@ -57,7 +57,7 @@ const rateReading = async (req, res) => {
   try {
     const { rating, opinion } = req.body;
     const reading = await ReadingProgress.findByPk(req.params.id);
-    if (!reading) return res.status(404).json({ error: 'Leitura não encontrada' });
+    if (!reading) return res.status(404).json({ error: req.t('errors.reading_not_found') });
 
     await reading.update({ rating, opinion });
     res.json(reading);
@@ -72,7 +72,7 @@ const rateReading = async (req, res) => {
 const deleteReading = async (req, res) => {
   try {
     const reading = await ReadingProgress.findByPk(req.params.id);
-    if (!reading) return res.status(404).json({ error: 'Leitura não encontrada' });
+    if (!reading) return res.status(404).json({ error: req.t('errors.reading_not_found') });
     await reading.destroy();
     res.status(204).send();
   } catch (error) {

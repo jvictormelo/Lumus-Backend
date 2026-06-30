@@ -1,0 +1,9 @@
+{
+  "errors": {
+    "email_taken": "Email already registered",
+    "invalid_credentials": "Invalid email or password",
+    "not_authenticated": "Not authenticated",
+    "book_not_found": "Book not found",
+    "reading_not_found": "Reading not found"
+  }
+}

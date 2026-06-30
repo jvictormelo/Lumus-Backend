@@ -17,7 +17,7 @@ const getAllBooks = async (req,res) =>{
 const getBookById = async (req, res) => {
   try {
     const book = await Book.findByPk(req.params.id);
-    if (!book) return res.status(404).json({ error: 'Livro não encontrado' });
+    if (!book) return res.status(404).json({ error: req.t('errors.book_not_found') });
     res.json(book);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -36,7 +36,7 @@ const createBook = async (req,res) => {
 const updateBook = async (req,res) =>{
     try {
         const book = await Book.findByPk(req.params.id);
-        if(!book) return res.status(404).json({error: 'Livro não encontrado bb'});
+        if(!book) return res.status(404).json({error: req.t('errors.book_not_found')});
         await book.update(req.body);
         res.json(book)
     } catch (error) {
@@ -48,7 +48,7 @@ const deleteBook = async (req, res) => {
     try {
         const book = await Book.findByPk(req.params.id);
         if (!book)
-            return res.status(404).json({error: 'livro não encontrado'}); 
+            return res.status(404).json({error: req.t('errors.book_not_found')}); 
             await book.destroy();
             res.status(204).send();
     } catch (error) {
