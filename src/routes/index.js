@@ -9,5 +9,6 @@ res.json({message: 'Lumus Api funcionando!'})
 
 router.use('/books', require('./books'))
 router.use('/users', require('./users'));
+router.use('/reading', require('./reading'));
 
 module.exports = router;
