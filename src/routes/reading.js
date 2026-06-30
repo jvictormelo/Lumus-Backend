@@ -7,6 +7,7 @@ const {
   updateProgress,
   rateReading,
   deleteReading,
+  downloadReport,
 } = require('../controllers/readingController');
 
 router.use(requireAuth);
@@ -16,5 +17,6 @@ router.post('/', startReading);
 router.patch('/:id/progress', updateProgress);
 router.patch('/:id/rate', rateReading);
 router.delete('/:id', deleteReading);
+router.get('/report/pdf', downloadReport);
 
 module.exports = router;

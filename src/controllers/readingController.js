@@ -1,6 +1,6 @@
 const { ReadingProgress, Book } = require('../models');
 const readingService = require('../services/readingService');
-
+const reportService = require('../services/reportService');
 /**
  * Controller responsável pelo progresso de leitura do usuário.
  * @module controllers/readingController
@@ -80,4 +80,15 @@ const deleteReading = async (req, res) => {
   }
 };
 
-module.exports = { getMyReadings, startReading, updateProgress, rateReading, deleteReading };
+/**
+ * Gera e retorna o relatório em PDF das leituras do usuário logado.
+ */
+const downloadReport = async (req, res) => {
+  try {
+    await reportService.generatePdfReport(req.session.userId, res);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+module.exports = { getMyReadings, startReading, updateProgress, rateReading, deleteReading, downloadReport };
