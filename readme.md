@@ -13,17 +13,21 @@ cp .env.example .env
 npm run dev
 ```
 
-## Funcionalidades
+## Funcionalidades implementadas
 
-- Cadastro e autenticação de usuários
-- Cadastro de livros (título, autor, páginas, gênero)
+- Cadastro e autenticação de usuários (sessão + senha criptografada)
+- CRUD completo de livros
 - Registro de progresso de leitura com página atual
 - Status automático: quero ler → lendo → lido
-- Avaliação e opinião ao concluir um livro
-- Relatório em PDF com resumo das leituras
-- Interface em português, inglês e espanhol
+- Cálculo de ritmo de leitura (páginas/dia) e previsão de conclusão
+- Avaliação (nota 1-5 e opinião) ao concluir um livro
+- Rotas de leitura protegidas por autenticação
+- Documentação da API gerada via JSDoc
 
-## ToDo
+## ToDo (não implementado)
 
-- Metas anuais de leitura
-- Estatísticas por gênero com gráficos
+- Frontend em React + Vite + Tailwind CSS
+- Geração de relatório em PDF
+- Aplicação da internacionalização nas mensagens de resposta
+  da API (estrutura já configurada com i18next)
+- Testes automatizados (unitários/integração)
