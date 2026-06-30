@@ -1,11 +1,11 @@
-# 📚 Lumus - Backend API
+# Lumus - Backend API
 
-## 📖 Sobre
+## Sobre
 O Lumus é uma API backend desenvolvida para gerenciamento de leitura pessoal.
 O sistema permite que usuários organizem seus livros, acompanhem seu progresso
 de leitura, avaliem obras concluídas e gerem relatórios personalizados.
 
-## 🎯 Objetivo
+## Objetivo
 Projeto desenvolvido com foco em:
 
 * Gerenciar o catálogo de livros do usuário
@@ -15,7 +15,7 @@ Projeto desenvolvido com foco em:
 * Gerar relatórios em PDF com estatísticas de leitura
 * Suporte a múltiplos idiomas de forma automática
 
-## 🚀 Tecnologias
+## Tecnologias
 
 * [Node.js](https://nodejs.org/)
 * [Express](https://expressjs.com/)
@@ -72,7 +72,7 @@ Projeto desenvolvido com foco em:
 * Documentação completa das funções via JSDoc
 * Gerada com `npm run docs` em `/docs`
 
-## 🔧 Instalação
+## Instalação
 
 1. Clonar o projeto:
 ```bash
@@ -113,14 +113,14 @@ CREATE SCHEMA lumus;
 npm run dev
 ```
 
-## 🔗 Endpoints
+##  Endpoints
 
 * `/api/users` — autenticação (register, login, logout)
 * `/api/books` — gerenciamento de livros
 * `/api/reading` — progresso de leitura
 * `/api/reading/report/pdf` — relatório em PDF
 
-## 📐 Arquitetura do projeto
+##  Arquitetura do projeto
 
 O projeto segue arquitetura em camadas:
 
@@ -130,7 +130,7 @@ O projeto segue arquitetura em camadas:
 * **Middlewares** → autenticação e i18n
 * **Locales** → arquivos de tradução (pt, en, es)
 
-## 📌 ToDo
+##  ToDo
 
 * Validação de exclusão de livros com leituras vinculadas
 * Notificações por email
