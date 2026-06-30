@@ -1,0 +1,9 @@
+{
+  "errors": {
+    "email_taken": "Email já cadastrado",
+    "invalid_credentials": "Email ou senha inválidos",
+    "not_authenticated": "Não autenticado",
+    "book_not_found": "Livro não encontrado",
+    "reading_not_found": "Leitura não encontrada"
+  }
+}

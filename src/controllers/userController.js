@@ -15,7 +15,7 @@ const register = async (req, res) => {
 
     const existingUser = await User.findOne({ where: { email } });
     if (existingUser) {
-      return res.status(400).json({ error: 'Email já cadastrado' });
+      return res.status(400).json({ error: req.t('errors.email_taken') });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -44,12 +44,12 @@ const login = async (req, res) => {
 
     const user = await User.findOne({ where: { email } });
     if (!user) {
-      return res.status(401).json({ error: 'Email ou senha inválidos' });
+      return res.status(401).json({ error: req.t('errors.invalid_credentials') });
     }
 
     const isValid = await bcrypt.compare(password, user.password);
     if (!isValid) {
-      return res.status(401).json({ error: 'Email ou senha inválidos' });
+      return res.status(401).json({ error: req.t('errors.invalid_credentials') });
     }
 
     req.session.userId = user.id;
