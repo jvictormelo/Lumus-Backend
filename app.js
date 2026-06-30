@@ -40,6 +40,8 @@ app.use(session({
 
 const PORT = process.env.PORT || 3000;
 
+app.use('/api', require('./src/routes'))
+
 syncDatabase().then(() => {
     app.listen(PORT, () => {
         console.log(`Lumus Backend rodando em http://localhost:${PORT}`);
